@@ -1,0 +1,100 @@
+.container {
+  position: relative;
+}
+
+.background {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.textWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(212, 212, 212, 0.8); /* Slightly transparent white background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards, slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Start slightly above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.text {
+  text-align: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 3rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+/* You can add more styles as needed */
+
+.subtitle {
+  font-size: 1.5vw;
+  color: #333;
+}
+
+.description {
+  font-size: 1.2vw;
+  color: #666;
+}
+
+.cta {
+  font-size: 1.3vw;
+  color: #666;
+}
+
+/* Existing styles */
+
+.heading,
+.subtitle,
+.description,
+.cta {
+  opacity: 0; /* Initially hide elements */
+  transform: translateY(-20px); /* Start slightly above */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition effect */
+}
+
+/* Animate individual elements */
+.heading {
+  animation-delay: 1s; /* Delay animation for heading */
+}
+
+.subtitle {
+  animation-delay: 1.2s; /* Delay animation for subtitle */
+}
+
+.description {
+  animation-delay: 1.4s; /* Delay animation for description */
+}
+
+.cta {
+  animation-delay: 1.6s; /* Delay animation for CTA */
+}
+
+/* Animation to fade in and slide elements */
+.heading,
+.subtitle,
+.description,
+.cta {
+  opacity: 1;
+  transform: translateY(0);
+}

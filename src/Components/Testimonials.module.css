@@ -1,0 +1,31 @@
+/* Testimonials.module.css */
+
+.testimonialsContainer {
+  position: relative;
+  background-image: url('./images/image10.jpg'); /* Add the URL of your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex; /* Display testimonials in a single row */
+  justify-content: flex-start; /* Align testimonials to the left */
+  overflow: hidden; /* Hide overflowing testimonials */
+  padding: 50px 0; /* Add padding for spacing */
+}
+
+.testimonial {
+  margin-right: 20px; /* Add margin between testimonials */
+  max-width: 300px; /* Limit the width of each testimonial */
+  animation: moveRight 10s linear infinite; /* Animation for moving testimonials */
+  background-color: rgb(224, 224, 224);
+  padding: 3%;
+}
+
+/* Keyframes for moving testimonials */
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

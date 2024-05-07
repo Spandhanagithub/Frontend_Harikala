@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content {
+  text-align: center;
+}
+
+.textWrapper {
+  margin-bottom: 20px; /* Add margin to separate from the added design */
+}
+
+.heading {
+  font-size: 3rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  position: relative; /* Position relative for absolute positioning of design elements */
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjust the position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px; /* Adjust the size of the design */
+  height: 2px; /* Adjust the size of the design */
+  background-color: #333; /* Adjust the color of the design */
+}

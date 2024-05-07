@@ -1,0 +1,96 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5vw; /* Adjust padding for responsiveness */
+  max-width: 100vw; /* Ensure container fits within the viewport width */
+  background-color: rgb(206, 206, 206);
+}
+
+.section {
+  flex: 1;
+  width: 100%;
+  height: 30vh; /* Adjust height for responsiveness */
+  padding: 5vw; /* Adjust padding for responsiveness */
+  background-color: #fff;
+  border-radius: 2vw; /* Adjust border radius for responsiveness */
+  box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1); /* Adjust box shadow for responsiveness */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, rgba(246, 186, 89, 0) 80%, rgb(126, 126, 126) 100%);
+}
+
+.iconLeft,
+.iconRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5vw; /* Adjust width for responsiveness */
+  height: 5vw; /* Adjust height for responsiveness */
+  background-color: rgba(46, 44, 43, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5vw;
+  color: #333;
+  margin-bottom: 2%;
+  /* Add animation */
+  opacity: 0;
+  animation: slideFromLeft 1s ease forwards;
+}
+
+.iconLeft {
+  left: 2vw; /* Adjust left position for responsiveness */
+}
+
+.iconRight {
+  right: 2vw; /* Adjust right position for responsiveness */
+}
+
+.iconLeft:hover,
+.iconRight:hover {
+  background-color: rgba(91, 89, 89, 0.2);
+}
+
+.iconLeft span,
+.iconRight span {
+  font-size: 3vw; /* Adjust font size for responsiveness */
+  color: #121111;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .iconLeft,
+  .iconRight {
+    width: 10vw; /* Adjust width for small screens */
+    height: 10vw; /* Adjust height for small screens */
+  }
+  
+  .title {
+    font-size: 4vw; /* Adjust font size for small screens */
+  }
+  
+  .section {
+    height: 40vh; /* Adjust height for small screens */
+  }
+}
+
+/* Animation */
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
